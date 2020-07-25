@@ -1,0 +1,75 @@
+######################################################################################
+# 
+#      <h2> for common application configurate </h2>
+#      @app(root)
+#        +- port
+#        +- router
+#        |    +-- dir : directory path(String:Array)
+#        |    \-- files : file(String:Array)
+#        +-- view
+#        |    +-- type : view template default null now support 'pug' or 'ejs'
+#        |    \-- dir : directory path(String)
+#        |
+#        \-- resources : resources path:bind
+#      
+#      << * default >>
+#
+######################################################################################
+app: 
+  port: 42700
+  resources: assets:/ assets/css:/css assets/js:/js assets/html:/html assets/vendor:/vendor assets/img:/img pages:/pages
+  toc: true
+  pagination:                         # Pagenation      - [ type, number, spash ] 
+    type: range                       # String          : [ range, *infinity ]
+    number: 10                        # Number          : default 5
+    splash: true                      # Boolean         : [ *True, False ]
+  router:                             # Routing         - [ dir, path ]
+    dir: /router                      # String          : default /
+    path: /app                        # String          : default /
+  view:                               # View            - [ type, theme ]
+    type: pug                         # String          : [ *pug, jade, ejs ]
+    theme: xt256                      # String          : default >> find enclosure vendor
+  analytics:                          # Analytics Pages - [ data, keyword, seperator, pages : [ dir ] ]
+    data: /data/analytics             # String          : default /data
+    keyword: key                      # String          : default key
+    seperator: \s{2}                  # Regexpr         : default space(\s)
+    pages:                            # pages           - [ dir ]
+      dir: /pages                     # String          : default pages
+  
+
+######################################################################################
+# <h2> configuration extends attribute </h2>
+# two allow [dir] or [files]
+######################################################################################
+extend: 
+  dir: environments
+  
+######################################################################################
+#
+#      it is the setting information exposed to the outside and 
+#      please be careful not to register important information.
+#      @external
+#       +-- appName : application logo text
+#       +-- social : social information
+#             \-- support : [android, apple, behance, blogger, deviantart
+#                          , dribble, envato, evernote, facebook, flickr
+#                          , google, instagram, linkedin, paypal, pinterest
+#                          , skype, soundcloud, sparow, tumlr, twitter, vimeo
+#                          , microsoft, wordpress, youtube] 
+#    
+######################################################################################
+external:
+  appName: OpenLab
+  icon: logo_ini_big.png
+  social: 
+    google: 
+      url: mailto:kim0lil0705@gmail.com
+    github:
+      url: https://github.com/kim0lil
+    facebook:
+      url: https://www.facebook.com/profile.php?id=100003710943408
+    twitter:
+      url: mailto:kim0lil0705@gmail.com
+    naver:
+      url: mailto:kim0lil0705@naver.com
+    

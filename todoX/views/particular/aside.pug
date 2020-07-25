@@ -1,0 +1,10 @@
+if pages.toc != null
+    div.toc-title
+        span
+            a(href="#").toc.toc-h0#tocHome
+                i.fas.fa-home.icon
+                h1=pages.key.title
+    hr
+    div.toc-item
+        each toc, idx in pages.toc
+            a(href=`#${toc.id}`,data-toc-id=`${toc.id}` id=`tocItem${idx}`, class=`toc toc-h${toc.level}`) !{toc.toc}

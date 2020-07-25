@@ -1,0 +1,51 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+    // Page Title registration
+    title= pages.key.title
+
+    // [[ sizing css ]]
+    link(rel="stylesheet" type="text/css" href="/css/size.css")
+
+    // * include common modules
+    include particular/extends.pug
+
+    // * include analytics
+    include particular/analytics.pug
+
+    // application basic [[ css ]] and [[ javascript ]]
+    style
+      include index.css
+
+    script 
+      include index.js
+
+  body
+    // root container is [[ app ]]
+    div.app#app
+
+      // * include header layout
+      header.header-container#headerContainer.h-80px.w-100per(hide='')
+        include particular/header.pug
+
+      // * include navigator layout
+      div.navigator-container#navigatorContainer
+        include particular/navigator.pug
+
+      // * render article-layout contents, aside
+      article.article-container#articleContainer 
+        include particular/body.pug
+      
+      if pages.key.toc == 'true' || appToc.toString() == 'true'
+        
+        // * include aside layout
+        aside.aside-container#asideContainer(absolute='')
+          include particular/aside.pug
+
+      // * include footer layout
+      footer.footer-container#footerContainer.h-40px
+        include particular/footer.pug
+    

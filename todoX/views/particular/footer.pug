@@ -1,0 +1,12 @@
+div.footer-left-container#footerLeftContainer
+    //- pre-declared zones for expansion
+
+div.footer-center-container#footerCenterContainer
+    ul.social-container#socialContainer
+        each oSoc, sSoc in social
+            li.social-item#socialItem(title=`move To ${sSoc}`)
+                a(href=`${oSoc.url}`).social-link
+                    img(src=`/img/social/${sSoc}.png`).w-30px.social-img
+
+div.footer-right-container.footerLeftContainer
+    //- pre-declared zones for expansion
