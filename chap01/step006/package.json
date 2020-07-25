@@ -1,0 +1,15 @@
+{
+  "name": "step006",
+  "version": "1.0.0",
+  "description": "조금더 활용도를 높여서 매처를 활용하여 경로를 매칭해 보도록 하겠습니다.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ant-path-matcher": "0.0.3"
+  }
+}

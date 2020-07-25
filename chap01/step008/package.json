@@ -1,0 +1,15 @@
+{
+  "name": "step007",
+  "version": "1.0.0",
+  "description": "이전에 등록한 매처를 활용하여 이미지를 서비스 하는 서버를 만들어 보도록 하겠습니다.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ant-path-matcher": "0.0.3"
+  }
+}
